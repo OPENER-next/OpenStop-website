@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "de.tu_chemnitz.etit.sse.openstop",
+      "sha256_cert_fingerprints":
+        ["04:42:74:6B:76:B1:E5:FC:F1:EF:6E:AA:BC:03:DD:F9:9A:D7:56:B6:22:17:9B:75:B7:2E:7C:D7:8F:C5:7D:E9"]
+    }
+  }
+]
