@@ -7,7 +7,7 @@
           "4C9Y67SX5K.de.tu-chemnitz.etit.sse.openstop"
         ],
         "paths": [
-          "*"
+          "*","/"
         ],
         "components": [
           {
