@@ -1,11 +1,8 @@
 {
   "applinks": {
-    "apps": [],
     "details": [
       {
-        "appIDs": [
-          "4C9Y67SX5K.de.tu-chemnitz.etit.sse.openstop"
-        ],
+        "appIDs": ["4C9Y67SX5K.de.tu-chemnitz.etit.sse.openstop"],
         "components": [
           {
             "/": "/*"
@@ -15,8 +12,6 @@
     ]
   },
   "webcredentials": {
-    "apps": [
-      "4C9Y67SX5K.de.tu-chemnitz.etit.sse.openstop"
-    ]
+    "apps": ["4C9Y67SX5K.de.tu-chemnitz.etit.sse.openstop"]
   }
 }
