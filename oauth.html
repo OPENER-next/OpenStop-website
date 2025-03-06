@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OpenStop - Failed redirection</title>
+    <meta name="description" content="OpenStop is a free app based on OpenStreetMap that allows anyone to easily collect accessibility data at and around stops.">
+    <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
+    <meta name="theme-color" content="#ffcd40">
+
+    <link rel="preload" href="font/Comfortaa_Regular.woff" as="font" type="font/woff">
+    <link rel="preload" href="font/NotoSans-Bold.woff" as="font" type="font/woff">
+
+    <style>
+      @font-face {
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Comfortaa'), url('font/Comfortaa_Regular.woff') format('woff');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'NotoSans';
+        font-style: normal;
+        font-weight: bold;
+        src: local('NotoSans'), url('font/NotoSans-Bold.woff') format('woff');
+        font-display: swap;
+      }
+
+      :root {
+        --primaryForeground: #009d5e;
+        --primaryBackground: #ffcd40;
+        --warningForeground: #ec5656;
+
+        font-family: Comfortaa, sans-serif;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border: none;
+      }
+
+      a {
+        color: #fff;
+        text-decoration-style: solid;
+        text-decoration-line: underline;
+        font-weight: normal;
+      }
+      a:hover,
+      a:focus {
+        text-decoration-thickness: 0.15em;
+      }
+
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primaryBackground);
+      }
+
+      header {
+        & h1 {
+          font-size: 3rem;
+          font-weight: bold;
+          color: var(--primaryForeground);
+          padding: 1.5rem 0;
+          font-family: NotoSans;
+          line-height: 1.2em;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          background-color: var(--primaryForeground);
+          clip-path: url(#hollowClipPath);
+          height: 2rem;
+          width: 100%;
+        }
+      }
+
+      main {
+        flex-grow: 1;
+        background-color: var(--primaryForeground);
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      footer {
+        background-color: var(--primaryForeground);
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .inner {
+        margin: 0 auto;
+        max-width: 750px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .turnout-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 15rem;
+        width: 100%;
+      }
+
+      .warning-font {
+        color: var(--warningForeground);
+      }
+
+      .links {
+        list-style: none;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-wrap: wrap;
+        grid-row-gap: 0.5em;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .links li:not(:last-child)::after {
+        content: "-";
+        margin: 0 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <img alt="" src="img/redirect_failed.svg" class="turnout-image">
+        <h1>Oops, you got to the <span class="warning-font">wrong stop!</span></h1>
+      </div>
+    </header>
+    <main>
+      <p class="inner">
+        It looks like your browser didn't redirect you to the OpenStop app. Check your browser settings or consider using a different browser.
+      </p>
+    </main>
+    <footer>
+      <ul class="inner links">
+        <li><a href="https://www.openernext.de/de/imprint.php">Imprint</a></li>
+        <li><a href="https://github.com/OPENER-next/OpenStop-website/blob/main/PRIVACY_POLICY.md">Privacy Policy</a></li>
+        <li><a href="https://github.com/OPENER-next/OpenStop">GitHub</a></li>
+      </ul>
+    </footer>
+
+    <svg width="0" height="0">
+      <defs>
+        <clipPath id="hollowClipPath" clipPathUnits="objectBoundingBox">
+          <path d="M0,0 C0,0,0.204,0.399,0.5,0.399 C0.796,0.399,1,0,1,0 L1,1 H0"></path>
+        </clipPath>
+      </defs>
+    </svg>
+  </body>
+</html>
